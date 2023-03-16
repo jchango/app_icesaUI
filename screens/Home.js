@@ -25,15 +25,20 @@ export default function Home() {
                 </TouchableOpacity>
 
 
-
                 <TouchableOpacity style={[globalStyles.button, { flex: 1, marginRight: 10 }]} onPress={() => alert('Ingresar con contraseña')}>
-                    <MaterialIcons name="vpn-key" size={30} color="white" />
-                    <Text style={globalStyles.buttonText}>Contraseña</Text>
+                    <View style={{ alignItems: 'center' }}>
+                        <MaterialIcons name="vpn-key" size={40} color="white" />
+                        <Text style={[globalStyles.buttonText, { marginTop: 5 }]}>Contraseña</Text>
+                    </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity style={[globalStyles.button, { flex: 1 }]} onPress={() => alert('Ingresar con PIN')}>
-                    <FontAwesome name="key" size={30} color="white" />
-                    <Text style={globalStyles.buttonText}>PIN</Text>
+                    <View style={{ alignItems: 'center' }}>
+                        <FontAwesome name="key" size={40} color="white" />
+                        <Text style={[globalStyles.buttonText, { marginTop: 5 }]}>PIN</Text>
+                    </View>
                 </TouchableOpacity>
+
             </View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20 }}>
                 <TouchableOpacity style={[globalStyles.button, { flex: 1, marginRight: 10 }]} onPress={() => alert('Ingresar con Facebook')}>
