@@ -1,13 +1,15 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
 
 const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#1c2331', // Color de fondo azul marino
+    backgroundColor: '#007fb8',
     padding: 20,
-    borderRadius: 10, // Bordes redondeados
+    borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -15,13 +17,13 @@ const globalStyles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
-    elevation: 5, // Sombreado
+    elevation: 5,
   },
   titleText: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: '#fff', // Color de texto blanco
+    color: '#fff',
   },
   inputContainer: {
     width: '100%',
@@ -34,7 +36,7 @@ const globalStyles = StyleSheet.create({
     fontSize: 18,
     borderRadius: 6,
     marginBottom: 10,
-    backgroundColor: '#fff', // Color de fondo blanco para campos de entrada
+    backgroundColor: '#f5d49b',
   },
   imageContainer: {
     flex: 1,
@@ -46,22 +48,35 @@ const globalStyles = StyleSheet.create({
     height: 200,
     resizeMode: 'contain',
   },
+  buttonContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    width: width - 40,
+    marginTop: 20,
+    
+  },
   button: {
-    backgroundColor: '#f01d71',
+    backgroundColor: '#212121',
     padding: 10,
-    borderRadius: 8,
-    width: 200,
+    borderRadius: 30,
+    width: (width - 80) / 3,
     alignItems: 'center',
     marginTop: 20,
   },
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 30,
   },
   linkText: {
-    color: '#fff', // Cambiar color de texto de enlaces a blanco
+    color: '#fff',
     textDecorationLine: 'underline',
+  },
+  whiteContainer: {
+    backgroundColor: '#fff',
+    width: '100%',
+    height: height / 2 / 2,
   },
 });
 
