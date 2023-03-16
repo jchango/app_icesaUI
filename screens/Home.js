@@ -17,57 +17,60 @@ export default function Home() {
             <Image style={globalStyles.logoImage} source={require('../assets/images/logo.png')} />
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20 }}>
 
-                <TouchableOpacity style={globalStyles.button} onPress={() => alert('Ingresar con huella')}>
-                    <View style={globalStyles.buttonIcon}>
+                <TouchableOpacity style={[globalStyles.button, { flex: 1, marginRight: 10 }]} onPress={() => alert('Ingresar con huella')}>
+                    <View style={[globalStyles.circleButton, { backgroundColor: '#808080' }]}>
                         <Ionicons name="finger-print-outline" size={30} color="white" />
                     </View>
-                    <Text style={globalStyles.buttonText}>Huella</Text>
+                    <Text style={[globalStyles.buttonText, { marginTop: 5 }]}>Huella</Text>
                 </TouchableOpacity>
 
-
                 <TouchableOpacity style={[globalStyles.button, { flex: 1, marginRight: 10 }]} onPress={() => alert('Ingresar con contraseña')}>
-                    <View style={{ alignItems: 'center' }}>
-                        <MaterialIcons name="vpn-key" size={40} color="white" />
-                        <Text style={[globalStyles.buttonText, { marginTop: 5 }]}>Contraseña</Text>
+                    <View style={[globalStyles.circleButton, { backgroundColor: '#808080' }]}>
+                        <MaterialIcons name="vpn-key" size={30} color="white" />
                     </View>
+                    <Text style={[globalStyles.buttonText, { marginTop: 5 }]}>Contraseña</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={[globalStyles.button, { flex: 1 }]} onPress={() => alert('Ingresar con PIN')}>
-                    <View style={{ alignItems: 'center' }}>
-                        <FontAwesome name="key" size={40} color="white" />
-                        <Text style={[globalStyles.buttonText, { marginTop: 5 }]}>PIN</Text>
+                    <View style={[globalStyles.circleButton, { backgroundColor: '#808080' }]}>
+                        <FontAwesome name="key" size={30} color="white" />
                     </View>
-                </TouchableOpacity>
-
-            </View>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20 }}>
-                <TouchableOpacity style={[globalStyles.button, { flex: 1, marginRight: 10 }]} onPress={() => alert('Ingresar con Facebook')}>
-                    <Entypo name="facebook" size={30} color="white" />
-                    <Text style={globalStyles.buttonText}>Facebook</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={[globalStyles.button, { flex: 1 }]} onPress={() => alert('Ingresar con Gmail')}>
-                    <MaterialIcons name="mail" size={30} color="white" />
-                    <Text style={globalStyles.buttonText}>Gmail</Text>
+                    <Text style={[globalStyles.buttonText, { marginTop: 5 }]}>PIN</Text>
                 </TouchableOpacity>
             </View>
 
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginVertical: 10 }}>
-                <TouchableOpacity style={[globalStyles.button, { width: windowWidth * 0.45 }]}>
-                    <Text style={globalStyles.buttonText}>Registrarse</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={[globalStyles.button, { width: windowWidth * 0.45 }]}>
-                    <Text style={globalStyles.buttonText}>Solicitar crédito</Text>
-                </TouchableOpacity>
-            </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20, alignItems: 'center', flex: 2 }}>
+  <View style={{ width: '70%' }}>
+    <TouchableOpacity style={[globalStyles.globalButton, globalStyles.facebookButton]} onPress={() => alert('Ingresar con Facebook')}>
+      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <Entypo name="facebook-with-circle" size={30} color="#4267B2" style={globalStyles.socialIcon} />
+        <Text style={[globalStyles.buttonText, { color: '#000' }]}>Facebook</Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+  <View style={{ width: '70%' }}>
+    <TouchableOpacity style={[globalStyles.globalButton, globalStyles.gmailButton]} onPress={() => alert('Ingresar con Gmail')}>
+      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <MaterialIcons name="mail" size={30} color="#DB4437" style={globalStyles.socialIcon} />
+        <Text style={[globalStyles.buttonText, { color: '#000' }]}>Gmail</Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+</View>
 
-            <View style={{ backgroundColor: '#fff', width: '100%', height: 200, alignItems: 'center', justifyContent: 'center', marginTop: 10, marginBottom: 20 }}>
-                <TouchableOpacity>
-                    <FontAwesome name="user-circle-o" size={30} color="#007fb8" style={{ marginRight: 0 }} />
+
+
+
+
+
+
+
+            <View style={{ backgroundColor: '#fff', width: '100%', height: 200, alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginTop: 10, marginBottom: 20 }}>
+                <TouchableOpacity style={globalStyles.rectangularButton} onPress={() => alert('Ingresar con Libreta')}>
+                    <FontAwesome name="book" size={30} color="#007fb8" style={globalStyles.buttonIcon} />
+                    <Text style={globalStyles.buttonText}>Libreta</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
-                    <FontAwesome name="user-circle-o" size={30} color="#007fb8" style={{ marginRight: 0 }} />
-                </TouchableOpacity>
             </View>
 
         </View>

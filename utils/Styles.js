@@ -54,7 +54,6 @@ const globalStyles = StyleSheet.create({
     justifyContent: 'space-between',
     width: width - 40,
     marginTop: 20,
-    
   },
   button: {
     flexDirection: 'column',
@@ -63,22 +62,30 @@ const globalStyles = StyleSheet.create({
     backgroundColor: '#007fb8',
     borderRadius: 10,
     padding: 10,
-    height: 80,
+    height: 100,
     width: '30%',
     margin: 5,
-},
-buttonIcon: {
+  },
+  buttonIcon: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-},
-buttonText: {
-    flex: 1,
+  },
+  circleButton: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 10,
+    backgroundColor: '#222222',
+  },
+  buttonText: {
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-},
+  },
   linkText: {
     color: '#fff',
     textDecorationLine: 'underline',
@@ -87,6 +94,21 @@ buttonText: {
     backgroundColor: '#fff',
     width: '100%',
     height: height / 2 / 2,
+  },
+ 
+  socialIcon: {
+    marginRight: 10,
+  },
+  facebookButton: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#3b5998',
+    
+  },
+  gmailButton: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#db4a39',
   },
 });
 
