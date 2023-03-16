@@ -57,18 +57,28 @@ const globalStyles = StyleSheet.create({
     
   },
   button: {
-    backgroundColor: '#212121',
-    padding: 10,
-    borderRadius: 30,
-    width: (width - 80) / 3,
+    flexDirection: 'column',
     alignItems: 'center',
-    marginTop: 20,
-  },
-  buttonText: {
-    color: '#fff',
+    justifyContent: 'center',
+    backgroundColor: '#007fb8',
+    borderRadius: 10,
+    padding: 10,
+    height: 80,
+    width: '30%',
+    margin: 5,
+},
+buttonIcon: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+},
+buttonText: {
+    flex: 1,
+    color: 'white',
+    fontSize: 16,
     fontWeight: 'bold',
-    fontSize: 30,
-  },
+    textAlign: 'center',
+},
   linkText: {
     color: '#fff',
     textDecorationLine: 'underline',

@@ -16,10 +16,16 @@ export default function Home() {
         <View style={globalStyles.container}>
             <Image style={globalStyles.logoImage} source={require('../assets/images/logo.png')} />
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20 }}>
-                <TouchableOpacity style={[globalStyles.button, { flex: 1, marginRight: 10 }]} onPress={() => alert('Ingresar con huella')}>
-                    <Ionicons name="finger-print-outline" size={30} color="white" />
+
+                <TouchableOpacity style={globalStyles.button} onPress={() => alert('Ingresar con huella')}>
+                    <View style={globalStyles.buttonIcon}>
+                        <Ionicons name="finger-print-outline" size={30} color="white" />
+                    </View>
                     <Text style={globalStyles.buttonText}>Huella</Text>
                 </TouchableOpacity>
+
+
+
                 <TouchableOpacity style={[globalStyles.button, { flex: 1, marginRight: 10 }]} onPress={() => alert('Ingresar con contraseña')}>
                     <MaterialIcons name="vpn-key" size={30} color="white" />
                     <Text style={globalStyles.buttonText}>Contraseña</Text>
@@ -50,15 +56,15 @@ export default function Home() {
             </View>
 
             <View style={{ backgroundColor: '#fff', width: '100%', height: 200, alignItems: 'center', justifyContent: 'center', marginTop: 10, marginBottom: 20 }}>
-    <TouchableOpacity>
-        <FontAwesome name="user-circle-o" size={30} color="#007fb8" style={{ marginRight: 0 }} />
-    </TouchableOpacity>
+                <TouchableOpacity>
+                    <FontAwesome name="user-circle-o" size={30} color="#007fb8" style={{ marginRight: 0 }} />
+                </TouchableOpacity>
 
-    <TouchableOpacity>
-        <FontAwesome name="user-circle-o" size={30} color="#007fb8" style={{ marginRight: 0 }} />
-    </TouchableOpacity>
-    </View>
+                <TouchableOpacity>
+                    <FontAwesome name="user-circle-o" size={30} color="#007fb8" style={{ marginRight: 0 }} />
+                </TouchableOpacity>
+            </View>
 
-</View>
-);
+        </View>
+    );
 }
